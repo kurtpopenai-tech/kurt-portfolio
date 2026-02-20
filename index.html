@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurt Paulse | AI Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio showcasing AI projects, machine learning systems, and product-focused technical work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="#home">Kurt Paulse</a>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero reveal">
+        <p class="eyebrow">Project Manager • AI Product Builder</p>
+        <h1>I build useful AI tools that solve everyday problems.</h1>
+        <p class="hero-text">
+          I take messy ideas, real frustrations, and overlooked inefficiencies, and turn them into working AI products that people can actually use.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View Projects</a>
+          <a class="button button-ghost" href="#contact">Let’s Talk</a>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>AI Projects</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-tag">Website</p>
+            <h3><a href="https://kurtpaulse.com/" target="_blank" rel="noreferrer">KurtPaulse.com</a></h3>
+            <p>
+              Built this portfolio website in 30 minutes, using OpenAI GPT 5.3 Codex .
+            </p>
+            <ul>
+              <li>GPT 5.3 Codex</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+            <a href="#" aria-label="Open Support Copilot project">Case Study</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-tag">Web Application</p>
+            <h3><a href="https://wasagreatidea.com" target="_blank" rel="noreferrer">WasAGreatIdea.com</a></h3>
+
+            <p>
+              Ideated and built a website that logs the projects you never finished, helping you discover the patterns holding you back. And at the end, export your own lessons-learned book.
+            </p>
+            <ul>
+              <li>Chat GPT</li>
+              <li>Replit</li>
+              <li>GoDaddy</li>
+              
+            </ul>
+            <a href="#" aria-label="Open Defect Detection project">Case Study</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-tag">Web Application</p>
+            <h3><a href="https://aicontentgorilla.com/" target="_blank" rel="noreferrer">AIContentGorilla.com</a></h3>
+            <p>
+              Developed a one-click social media content generation site, where users can upload their data and have the site return a social media post from the platform of their choosing.
+            </p>
+            <ul>
+              <li>Chat GPT</li>
+              <li>Replit</li>
+              <li>Go Daddy</li>
+              
+            </ul>
+            <a href="#" aria-label="Open Churn Prediction project">Case Study</a>
+          </article>
+        </div>
+        <div class="featured-video">
+          <div class="featured-video-head">
+            <p class="project-tag">YouTube Showcase</p>
+            <h3>Latest Video</h3>
+            <p>My latest AI video from a channel I created, using Chat GPT to ideate and Sora/Capcut to build:</p>
+          </div>
+          <div class="video-shell">
+            <iframe
+              id="youtube-showcase"
+              title="Featured YouTube Video"
+              src=""
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p id="youtube-hint" class="video-hint" hidden></p>
+        </div>
+      </section>
+
+      <section id="about" class="section about reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2>About Me</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+
+My career has been spent leading complex digital initiatives inside a large enterprise environment. That means I understand how work actually gets done, how decisions are made, and how ideas stall.
+
+<br>
+<br>
+But outside of that structure, I build.
+
+I experiment.
+I test tools.
+I connect systems that were never meant to talk to each other.
+I find ways to make AI practical.
+          </p>
+          <div class="skills">
+            <h3>Core Skills</h3>
+            <p>Problem Framing • Pattern Recognition • Systems Thinking • Communication Clarity • Workflow Design • Strategic Empathy</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Let’s Build Something Useful</h2>
+        </div>
+        <p>
+
+I’m open to freelance builds, advisory work, and AI product collaborations.
+If you’re trying to turn an idea into a working system, I can help you get there.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:kurtp7@gmail.com">kurtp7@gmail.com</a>
+          <a href="https://www.youtube.com/@realmaxmentor" target="_blank" rel="noreferrer">Youtube</a>
+          <a href="https://www.linkedin.com/in/kurt-paulse-74586175/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Kurt Paulse. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

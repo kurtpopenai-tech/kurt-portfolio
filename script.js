@@ -82,6 +82,61 @@ function buildYouTubeEmbedUrl(config) {
   return '';
 }
 
+
+function buildThumioUrl(siteUrl, cacheBuster) {
+  return `https://image.thum.io/get/width/1200/crop/760/noanimate/${siteUrl}?v=${cacheBuster}`;
+}
+
+function buildMicrolinkApiUrl(siteUrl) {
+  const apiUrl = new URL('https://api.microlink.io/');
+  apiUrl.searchParams.set('url', siteUrl);
+  apiUrl.searchParams.set('screenshot', 'true');
+  apiUrl.searchParams.set('meta', 'false');
+  apiUrl.searchParams.set('embed', 'screenshot.url');
+  apiUrl.searchParams.set('waitUntil', 'networkidle2');
+  apiUrl.searchParams.set('force', 'true');
+  return apiUrl.toString();
+}
+
+async function hydrateProjectThumbnails() {
+  const cacheBuster = Math.floor(Date.now() / 3600000);
+  const thumbnailImages = document.querySelectorAll('.project-preview img[data-thumbnail-site]');
+
+  await Promise.all(
+    [...thumbnailImages].map(async image => {
+      const primarySite = image.dataset.thumbnailSite;
+      const fallbackSite = image.dataset.thumbnailFallbackSite;
+
+      if (!primarySite) {
+        return;
+      }
+
+      image.onerror = () => {
+        image.onerror = null;
+        image.src = buildThumioUrl(fallbackSite || primarySite, cacheBuster);
+      };
+
+      try {
+        const response = await fetch(buildMicrolinkApiUrl(primarySite));
+        if (!response.ok) {
+          throw new Error(`Microlink request failed: ${response.status}`);
+        }
+
+        const payload = await response.json();
+        const screenshotUrl = payload?.data?.screenshot?.url;
+
+        if (!screenshotUrl) {
+          throw new Error('Microlink response missing screenshot URL');
+        }
+
+        image.src = `${screenshotUrl}${screenshotUrl.includes('?') ? '&' : '?'}v=${cacheBuster}`;
+      } catch {
+        image.src = buildThumioUrl(primarySite, cacheBuster);
+      }
+    })
+  );
+}
+
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -114,5 +169,7 @@ if (youtubeHint && window.location.protocol === 'file:') {
   youtubeHint.textContent =
     'For YouTube embeds to load reliably, open this site at http://localhost (not directly as a file).';
 }
+
+hydrateProjectThumbnails();
 
 document.getElementById('year').textContent = new Date().getFullYear();

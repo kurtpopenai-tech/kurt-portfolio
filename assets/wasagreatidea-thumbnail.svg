@@ -1,0 +1,16 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="72" fill="#EFF4FA"/>
+  <rect x="60" y="60" width="1080" height="640" rx="54" fill="#FFFFFF" stroke="#D8E1ED"/>
+  <circle cx="180" cy="182" r="54" fill="#DCE8F4"/>
+  <circle cx="310" cy="182" r="54" fill="#C7D7EA"/>
+  <circle cx="440" cy="182" r="54" fill="#AFC4DE"/>
+  <rect x="120" y="286" width="480" height="72" rx="24" fill="#12213B"/>
+  <rect x="120" y="390" width="560" height="24" rx="12" fill="#5E7697"/>
+  <rect x="120" y="432" width="490" height="24" rx="12" fill="#8CA1BC"/>
+  <rect x="120" y="498" width="300" height="120" rx="30" fill="#E7EEF7"/>
+  <rect x="450" y="498" width="300" height="120" rx="30" fill="#D5E0EE"/>
+  <rect x="780" y="130" width="240" height="430" rx="34" fill="#EDF3F9" stroke="#D6E2EE"/>
+  <rect x="824" y="180" width="152" height="152" rx="76" fill="#12213B"/>
+  <path d="M900 228L925 273H875L900 228Z" fill="#F8FBFF"/>
+  <text x="120" y="650" fill="#12213B" font-family="Arial, sans-serif" font-size="56" font-weight="700">WasAGreatIdea.com</text>
+</svg>

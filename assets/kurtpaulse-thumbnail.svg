@@ -1,0 +1,14 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="72" fill="#EAF1F8"/>
+  <rect x="60" y="60" width="1080" height="640" rx="54" fill="#F8FBFF" stroke="#D6E0EC"/>
+  <rect x="120" y="118" width="210" height="24" rx="12" fill="#A7B8CD"/>
+  <rect x="120" y="190" width="420" height="74" rx="24" fill="#11203A"/>
+  <rect x="120" y="286" width="360" height="28" rx="14" fill="#5A7293"/>
+  <rect x="120" y="344" width="220" height="180" rx="28" fill="#DDE8F5"/>
+  <rect x="370" y="344" width="220" height="180" rx="28" fill="#C6D6E8"/>
+  <rect x="620" y="344" width="460" height="44" rx="22" fill="#183058" opacity="0.94"/>
+  <rect x="620" y="416" width="400" height="22" rx="11" fill="#7E94B2"/>
+  <rect x="620" y="456" width="340" height="22" rx="11" fill="#A4B4C8"/>
+  <rect x="620" y="542" width="180" height="56" rx="28" fill="#11203A"/>
+  <text x="120" y="650" fill="#11203A" font-family="Arial, sans-serif" font-size="60" font-weight="700">KurtPaulse.com</text>
+</svg>
